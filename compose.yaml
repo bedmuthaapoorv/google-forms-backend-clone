@@ -1,0 +1,29 @@
+services:
+  api:
+    container_name: api
+    restart: always
+    build: .
+    ports:
+      - ${PORT}:${PORT}
+    depends_on:
+      - db
+    volumes:
+    - .:/usr/src/app
+    networks:
+      - default
+  db:
+    container_name: postgres
+    image: postgres
+    ports:
+      - '5432:${DB_PORT}'
+    volumes:
+      - data:/data/db
+      - ./docker_postgres_init.sql:/docker-entrypoint-initdb.d/docker_postgres_init.sql
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_NAME}
+    networks:
+      - default
+volumes: 
+ data: {}
