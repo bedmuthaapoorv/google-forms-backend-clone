@@ -18,6 +18,7 @@
     "googleapis": "^129.0.0",
     "mongodb": "^6.3.0",
     "node-postgres": "^0.6.2",
+    "nodemailer": "^6.9.8",
     "pg": "^8.11.3",
     "redis": "^4.6.12",
     "request": "^2.88.2"

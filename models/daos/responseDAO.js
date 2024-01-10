@@ -1,5 +1,5 @@
 const { response } = require('express');
-const connectors=require('../dbconnectors')
+const connectors=require('../connectors')
 
 async function storeResponse(data){
     let client=connectors.mongoClient;

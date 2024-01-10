@@ -27,7 +27,17 @@ const mongoClient = new MongoClient(uri, {
   }
 });
 
+
+let nodemailer = require('nodemailer')
+let transporter=nodemailer.createTransport({
+  service:'gmail',
+  auth:{
+    user: 'bedmuthaapoorv@gmail.com',
+    pass:'zgwj bhdc dxry dgiw'
+  }
+})
+
 exports.mongoClient=mongoClient;
 exports.accountDBconn=accountDBconn;
 exports.responderDBconn=responderDBconn;
-
+exports.transporter=transporter;

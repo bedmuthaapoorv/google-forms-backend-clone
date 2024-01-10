@@ -1,6 +1,6 @@
 // function: all DB interactions
 
-const connectors=require('../dbconnectors')
+const connectors=require('../connectors')
 const conn=connectors.accountDBconn
 const bcrypt=require('bcryptjs')
 
@@ -42,7 +42,7 @@ async function authenticate(username, password){
     };
 }
 
-async function getPhoneNumber(phoneNumber){
+async function getPhoneNumber(username){
     console.log('fetching phone number for:'+username)
     const query="select contact from users where username='"+username+"' LIMIT 1";
     let response='ok'
@@ -54,13 +54,13 @@ async function getPhoneNumber(phoneNumber){
     };
 }
 
-async function getEmail(email){
+async function getEmail(username){
     console.log('fetching email for:'+username)
     const query="select email from users where username='"+username+"' LIMIT 1";
     let response='ok'
     try{
         response=await conn.query(query);
-        return response.rows[0].contact;
+        return response.rows[0].email;
     }catch(err){
         throw err;
     };

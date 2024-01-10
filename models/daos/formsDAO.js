@@ -1,4 +1,4 @@
-const connectors=require('../dbconnectors')
+const connectors=require('../connectors')
 
 async function createForm(formsData) {
     let client=connectors.mongoClient;

@@ -1,4 +1,4 @@
-let connector=require('../dbconnectors')
+let connector=require('../connectors')
 
 async function storeResponseFormMapping(responseID, formID, responderID){
     console.log('adding new response-form mapping')
