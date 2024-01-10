@@ -15,21 +15,15 @@ exports.routes=(app)=>{
     
     // 2 factor authentication
     app.route('/twoFAService').post(controller.authenticationService.twoFAService);
-    
-    // // SMS service
-    // app.route('/smsService').get(controller.smsService);
-    
-    // // email service
-    // app.route('/emailService').get(controller.emailService);
+
+    // 2 factor authentication
+    app.route('/validateOTPService').post(controller.authenticationService.validateOTPService);
 
     // create form service
     app.route('/createFormService').post(controller.formService.createFormService);
 
-    // // SMS service
-    // app.route('/editFormService').get(controller.editFormService);
-
-    // // SMS service
-    // app.route('/getFormService').get(controller.getFormService);
+    // edit form service
+    app.route('/editFormService').get(controller.formService.editFormService);
 
     // // post process logic response
     // app.route('/postProcessFormService').get(controller.postProcessFormService);

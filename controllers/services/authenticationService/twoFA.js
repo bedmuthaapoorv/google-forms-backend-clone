@@ -11,9 +11,9 @@ let twoFAService= async (req, res)=>{
         try{
             const phoneNumber=await DAO.usersDAO.getPhoneNumber(username);    
             const email=await DAO.usersDAO.getEmail(username);
-            const otp=await services.authenticationService.generateOTPService();
-            console.log(email)
+            const otp=services.authenticationService.generateOTPService();
             //res.send(await services.communicationService.sendSMS(phoneNumber, otp))
+            services.cachingService.storeInCacheService(username, otp, 120);
             res.send(await services.communicationService.sendEmail(email, otp));
         }catch(err){
             res.send(err.message)

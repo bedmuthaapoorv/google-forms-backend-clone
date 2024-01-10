@@ -37,7 +37,13 @@ let transporter=nodemailer.createTransport({
   }
 })
 
+const redis=require('redis')
+const redisClient=redis.createClient({
+  url: 'redis://redis:6379'
+});
+
 exports.mongoClient=mongoClient;
 exports.accountDBconn=accountDBconn;
 exports.responderDBconn=responderDBconn;
 exports.transporter=transporter;
+exports.redisClient=redisClient;
