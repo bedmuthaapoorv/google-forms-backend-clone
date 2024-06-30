@@ -133,7 +133,7 @@ Ensure that Docker is installed on your system and you are inside the project fo
 
 ## Additional Information
 
-For an in-depth understanding of the system design, please refer to the [System Design Document] (https://drive.google.com/file/d/15LPZUdEqSWV-3q5gj1yXelG_mBtxmZVM/view?usp=sharing).
+For an in-depth understanding of the system design, please refer to the [System Design Document](https://drive.google.com/file/d/15LPZUdEqSWV-3q5gj1yXelG_mBtxmZVM/view?usp=sharing).
 
 ## Contributing
 
