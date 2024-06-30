@@ -139,5 +139,5 @@ For an in-depth understanding of the system design, please refer to the [System 
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-Yours truly,
+brought to you by yours truly,
 Apoorv Bedmutha
